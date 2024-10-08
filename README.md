@@ -1,5 +1,17 @@
 # iohk
 
+This project provides a user-friendly BDD solution for automated API tests using Playwright, a powerful end-to-end testing framework. This was accomplished while retaining Playwright in its vanilla state without adding any Gherkin dependencies.
+
+![Gherkin BDD](doc_data/image-bdd.png)
+
+API testing is also supported with validating responses against predefined schemas. In this way errors are caught early in the development process and maintain API contracts.
+
+![Response Schema](doc_data/image-schema.png)
+
+Features like Playwright's inbuilt retry mechanism was leveraged to compensate for the service cold start issue.
+
+![Test Retry](doc_data/image-retry.png)
+
 ## Installation via Custom script
 
 This Bash script automates the installation process for Playwright, a popular end-to-end testing framework for web applications. It performs the following tasks:
@@ -15,4 +27,8 @@ Usage:
 Make the script executable using chmod +x install-and-run-pw.sh.
 Run the script: ./install_and_run_playwright.sh
 
-![alt text](doc_data/image.png)
+![Local Run Steps](doc_data/image.png)
+
+## Report
+
+![Results](doc_data/image-results.png)

@@ -1,4 +1,4 @@
-import { APIRequest, APIResponse, Page } from "playwright/test";
+import { APIResponse, Page } from "playwright/test";
 
 export class HttpClient {
   private readonly page: Page;

@@ -1,8 +1,7 @@
 import { APIResponse, expect, type Page } from "@playwright/test";
-
 import { HttpClient } from "../../../utils/libs/http-client";
+import { schemaMetadataQueryPost } from "../../../utils/schemas/metadata-query";
 import Ajv from "ajv";
-import { schemaMetadataQueryPost } from "../../../utils/types/query.type";
 
 export class QuerySteps {
   private page: Page;
@@ -31,7 +30,7 @@ export class QuerySteps {
   then_response_should_match_metadataquery_schema = async () => {
     const validate = this.ajv.compile(schemaMetadataQueryPost);
     const valid = validate(await this.response?.json());
-    
+
     expect(
       valid,
       validate?.errors?.map((x: any) => x.message).join("/r/n")

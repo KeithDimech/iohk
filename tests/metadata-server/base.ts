@@ -1,8 +1,8 @@
-import { test as base } from "@playwright/test";
 import { CommonSteps } from "./steps/common.steps";
-import { QuerySteps } from "./steps/query.steps";
-import { PropertySteps } from "./steps/property.steps";
 import { MetadataSteps } from "./steps/metadata.steps";
+import { PropertySteps } from "./steps/property.steps";
+import { QuerySteps } from "./steps/query.steps";
+import { test as base } from "@playwright/test";
 
 type MyFixtures = {
   commonSteps: CommonSteps;

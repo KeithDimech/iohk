@@ -1,8 +1,7 @@
-import Ajv from "ajv";
-
 import { APIResponse, expect, type Page } from "@playwright/test";
 import { HttpClient } from "../../../utils/libs/http-client";
 import { schemaMetadataPropertyGet } from "../../../utils/schemas/metadata-property-get";
+import Ajv from "ajv";
 
 export class PropertySteps {
   private page: Page;
@@ -36,6 +35,4 @@ export class PropertySteps {
       validate?.errors?.map((x: any) => x.message).join("/r/n")
     ).toBeTruthy();
   };
-
-  
 }

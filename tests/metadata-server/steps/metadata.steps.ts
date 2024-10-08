@@ -1,8 +1,7 @@
 import { APIResponse, expect, type Page } from "@playwright/test";
-import Ajv from "ajv";
-
 import { HttpClient } from "../../../utils/libs/http-client";
 import { schemaMetadataGet } from "../../../utils/schemas/metadata-get";
+import Ajv from "ajv";
 
 export class MetadataSteps {
   private page: Page;
