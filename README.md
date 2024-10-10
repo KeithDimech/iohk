@@ -12,7 +12,7 @@ Features like Playwright's inbuilt retry mechanism was leveraged to compensate f
 
 ![Test Retry](doc_data/image-retry.png)
 
-## Installation via Custom script
+## Local Installation via Custom script
 
 This Bash script automates the installation process for Playwright, a popular end-to-end testing framework for web applications. It performs the following tasks:
 
@@ -28,6 +28,22 @@ Make the script executable using chmod +x install-and-run-pw.sh.
 Run the script: ./install_and_run_playwright.sh
 
 ![Local Run Steps](doc_data/image.png)
+
+## CI Pipeline
+
+The pipeline is executed on a schedule in a workflow is making use of a docker image which is developed and maintained by Microsoft. The workflow is constructed as per playwright [GitHub Actions](https://playwright.dev/docs/ci#github-actions).
+
+A Dockerfile is added to check tests and dependencies locally after changing or upgrading.
+
+> docker build -t my-tests .
+>
+> docker run my-tests
+
+### Github
+
+Pipeline artifacts are uploaded to gitlab after run is complete for investigation and reporting.
+
+![Pipeline](doc_data/image-pipeline.png)
 
 ## Report
 
